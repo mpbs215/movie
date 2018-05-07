@@ -21,7 +21,7 @@ public class FaqAction implements Action {
 		// TODO Auto-generated method stub
 		
 		ModelAndView mv = new ModelAndView();
-
+		mv.setPath("web/faq.jsp");
 		return mv;
 	}
 

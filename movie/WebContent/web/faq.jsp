@@ -9,28 +9,28 @@
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
 		function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- //for-mobile-apps -->
-<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
-<link rel="stylesheet" href="css/faqstyle.css" type="text/css" media="all" />
-<link href="css/medile.css" rel='stylesheet' type='text/css' />
-<link href="css/single.css" rel='stylesheet' type='text/css' />
-<link rel="stylesheet" href="css/contactstyle.css" type="text/css" media="all" />
+<link href="${pageContext.request.contextPath}/web/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="${pageContext.request.contextPath}/web/css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="${pageContext.request.contextPath}/web/stylesheet" href="css/faqstyle.css" type="text/css" media="all" />
+<link href="${pageContext.request.contextPath}/web/css/medile.css" rel='stylesheet' type='text/css' />
+<link href="${pageContext.request.contextPath}/web/css/single.css" rel='stylesheet' type='text/css' />
+<link rel="stylesheet" href="${pageContext.request.contextPath}/web/css/contactstyle.css" type="text/css" media="all" />
 <!-- news-css -->
-<link rel="stylesheet" href="news-css/news.css" type="text/css" media="all" />
+<link rel="stylesheet" href="${pageContext.request.contextPath}/web/news-css/news.css" type="text/css" media="all" />
 <!-- //news-css -->
 <!-- list-css -->
-<link rel="stylesheet" href="list-css/list.css" type="text/css" media="all" />
+<link rel="stylesheet" href="${pageContext.request.contextPath}/web/list-css/list.css" type="text/css" media="all" />
 <!-- //list-css -->
 <!-- font-awesome icons -->
-<link rel="stylesheet" href="css/font-awesome.min.css" />
+<link rel="stylesheet" href="${pageContext.request.contextPath}/web/css/font-awesome.min.css" />
 <!-- //font-awesome icons -->
 <!-- js -->
-<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/web/js/jquery-2.1.4.min.js"></script>
 <!-- //js -->
 <link href='//fonts.googleapis.com/css?family=Roboto+Condensed:400,700italic,700,400italic,300italic,300' rel='stylesheet' type='text/css'>
 <!-- start-smoth-scrolling -->
-<script type="text/javascript" src="js/move-top.js"></script>
-<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/web/js/move-top.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/web/js/easing.js"></script>
 <script type="text/javascript">
 	jQuery(document).ready(function($) {
 		$(".scroll").click(function(event){		
@@ -179,7 +179,7 @@
 		<a href="QAboard.jsp" class="button">개인 문의하기</a>
 	</div>
 	<%@include file="bottom.jsp" %>
-	<script src="js/bootstrap.min.js"></script>
+	<script src="${pageContext.request.contextPath}/web/js/bootstrap.min.js"></script>
 <script>
 $(document).ready(function(){
     $(".dropdown").hover(            

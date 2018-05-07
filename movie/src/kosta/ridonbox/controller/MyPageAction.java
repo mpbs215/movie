@@ -20,7 +20,7 @@ public class MyPageAction implements Action {
 			throws ServletException, IOException {
 
 		ModelAndView mv = new ModelAndView();
-
+		mv.setPath("web/myPage.jsp");
 		return mv;
 	}
 

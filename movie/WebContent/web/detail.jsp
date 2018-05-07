@@ -13,7 +13,7 @@
 <title>Movie Detail</title>
 
 <!-- Custom styles for this template -->
-<link href="css/blog-home.css" rel="stylesheet">
+<link href="${pageContext.request.contextPath}/web/css/blog-home.css" rel="stylesheet">
 
 <!-- for-mobile-apps -->
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -27,30 +27,29 @@
 
 
 </script>
-<link href="css/bootstrap.css" rel="stylesheet" type="text/css"
+<link href="${pageContext.request.contextPath}/web/css/bootstrap.css" rel="stylesheet" type="text/css"
 	media="all" />
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
-<link rel="stylesheet" href="css/contactstyle.css" type="text/css"
+<link href="${pageContext.request.contextPath}/web/css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="${pageContext.request.contextPath}/web/css/contactstyle.css" type="text/css"
 	media="all" />
-<link rel="stylesheet" href="css/faqstyle.css" type="text/css"
+<link rel="stylesheet" href="${pageContext.request.contextPath}/web/css/faqstyle.css" type="text/css"
 	media="all" />
-<link href="css/single.css" rel='stylesheet' type='text/css' />
-<link href="css/medile.css" rel='stylesheet' type='text/css' />
-<link href="css/jquery.slidey.min.css" rel="stylesheet">
-<link href="css/popuo-box.css" rel="stylesheet" type="text/css"
+<link href="${pageContext.request.contextPath}/web/css/single.css" rel='stylesheet' type='text/css' />
+<link href="${pageContext.request.contextPath}/web/css/medile.css" rel='stylesheet' type='text/css' />
+<link href="${pageContext.request.contextPath}/web/css/jquery.slidey.min.css" rel="stylesheet">
+<link href="${pageContext.request.contextPath}/web/css/popuo-box.css" rel="stylesheet" type="text/css"
 	media="all" />
-<link rel="stylesheet" href="css/font-awesome.min.css" />
-<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/web/css/font-awesome.min.css" />
+<script type="text/javascript" src="${pageContext.request.contextPath}/web/js/jquery-2.1.4.min.js"></script>
 <link rel="stylesheet"
 	href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-<link rel="stylesheet" href="/resources/demos/style.css">
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<script src="js/owl.carousel.js"></script>
+<script src="${pageContext.request.contextPath}/web/js/owl.carousel.js"></script>
 <!-- //banner-bottom-plugin -->
 <!-- <link href='//fonts.googleapis.com/css?family=Roboto+Condensed:400,700italic,700,400italic,300italic,300' rel='stylesheet' type='text/css'> -->
 <!-- start-smoth-scrolling -->
-<script type="text/javascript" src="js/move-top.js"></script>
-<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/web/js/move-top.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/web/js/easing.js"></script>
 <script type="text/javascript">
 	jQuery(document).ready(function($) {
 		$(".scroll").click(function(event) {
@@ -61,7 +60,7 @@
 		});
 	});
 </script>
-<script src="js/simplePlayer.js"></script>
+<script src="${pageContext.request.contextPath}/web/js/simplePlayer.js"></script>
 <script>
 	$("document").ready(function() {
 		$("#video").simplePlayer();
@@ -96,7 +95,7 @@ th{
 				<div class="card mb-4">
 					<div class="video-grid-single-page-agileits">
 						<div data-video="xUDhdCsLkjU" id="video">
-							<img src="images/5.jpg" alt="" class="img-responsive" />
+							<img src="${pageContext.request.contextPath}/web/images/5.jpg" alt="" class="img-responsive" />
 						</div>
 					</div>
 				</div>

@@ -9,23 +9,23 @@
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
 		function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- //for-mobile-apps -->
-<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
-<link rel="stylesheet" href="css/contactstyle.css" type="text/css" media="all" />
-<link rel="stylesheet" href="css/faqstyle.css" type="text/css" media="all" />
-<link href="css/single.css" rel='stylesheet' type='text/css' />
-<link href="css/medile.css" rel='stylesheet' type='text/css' />
+<link href="${pageContext.request.contextPath}/web/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="${pageContext.request.contextPath}/web/css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="${pageContext.request.contextPath}/web/css/contactstyle.css" type="text/css" media="all" />
+<link rel="stylesheet" href="${pageContext.request.contextPath}/web/css/faqstyle.css" type="text/css" media="all" />
+<link href="${pageContext.request.contextPath}/web/css/single.css" rel='stylesheet' type='text/css' />
+<link href="${pageContext.request.contextPath}/web/css/medile.css" rel='stylesheet' type='text/css' />
 <!-- banner-slider -->
-<link href="css/jquery.slidey.min.css" rel="stylesheet">
+<link href="${pageContext.request.contextPath}/web/css/jquery.slidey.min.css" rel="stylesheet">
 <!-- //banner-slider -->
 <!-- pop-up -->
-<link href="css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
+<link href="${pageContext.request.contextPath}/web/css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
 <!-- //pop-up -->
 <!-- font-awesome icons -->
-<link rel="stylesheet" href="css/font-awesome.min.css" />
+<link rel="stylesheet" href="${pageContext.request.contextPath}/web/css/font-awesome.min.css" />
 <!-- //font-awesome icons -->
 <!-- js -->
-<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/web/js/jquery-2.1.4.min.js"></script>
 <!-- //js -->
 <!-- banner-bottom-plugin -->
 <!-- <link href="css/owl.carousel.css" rel="stylesheet" type="text/css" media="all">
@@ -33,7 +33,7 @@
 <link rel="stylesheet" href="/resources/demos/style.css">
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<script src="js/owl.carousel.js"></script>
+<script src="${pageContext.request.contextPath}/web/js/owl.carousel.js"></script>
 
 <!--실제 슬라이드 효과 적용란-->
 <script>
@@ -53,8 +53,8 @@
 <!-- //banner-bottom-plugin -->
 <!-- <link href='//fonts.googleapis.com/css?family=Roboto+Condensed:400,700italic,700,400italic,300italic,300' rel='stylesheet' type='text/css'> -->
 <!-- start-smoth-scrolling -->
-<script type="text/javascript" src="js/move-top.js"></script>
-<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/web/js/move-top.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/web/js/easing.js"></script>
 <script type="text/javascript">
 	jQuery(document).ready(function($) {
 		$(".scroll").click(function(event){		
@@ -88,7 +88,7 @@
 		</tbody>
 	</table>
 	<hr />
-	<a class="btn btn-default pull-right"  style="margin-bottom:5%" onclick="location.href='insertQA.jsp'">글쓰기</a>
+	<a class="btn btn-default pull-right"  style="margin-bottom:5%" onclick="location.href=''${pageContext.request.contextPath}/web/insertQA.jsp''">글쓰기</a>
 </div>
 <%@include file="bottom.jsp" %>
 </body>

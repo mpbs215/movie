@@ -20,7 +20,7 @@ public class DetailAction implements Action {
 			throws ServletException, IOException {
 		
 		ModelAndView mv = new ModelAndView();
-		mv.setPath("detail.jsp");
+		mv.setPath("web/detail.jsp");
 		return mv;
 	}
 

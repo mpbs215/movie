@@ -13,37 +13,37 @@
 
 </script>
 <!-- //for-mobile-apps -->
-<link href="css/bootstrap.css" rel="stylesheet" type="text/css"
+<link href="${pageContext.request.contextPath}/web/css/bootstrap.css" rel="stylesheet" type="text/css"
 	media="all" />
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
-<link rel="stylesheet" href="css/contactstyle.css" type="text/css"
+<link href="${pageContext.request.contextPath}/web/css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="${pageContext.request.contextPath}/web/css/contactstyle.css" type="text/css"
 	media="all" />
-<link rel="stylesheet" href="css/faqstyle.css" type="text/css"
+<link rel="stylesheet" href="${pageContext.request.contextPath}/web/css/faqstyle.css" type="text/css"
 	media="all" />
-<link href="css/single.css" rel='stylesheet' type='text/css' />
-<link href="css/medile.css" rel='stylesheet' type='text/css' />
+<link href="${pageContext.request.contextPath}/web/css/single.css" rel='stylesheet' type='text/css' />
+<link href="${pageContext.request.contextPath}/web/css/medile.css" rel='stylesheet' type='text/css' />
 <!-- banner-slider -->
-<link href="css/jquery.slidey.min.css" rel="stylesheet">
+<link href="${pageContext.request.contextPath}/web/css/jquery.slidey.min.css" rel="stylesheet">
 <!-- //banner-slider -->
 <!-- pop-up -->
-<link href="css/popuo-box.css" rel="stylesheet" type="text/css"
+<link href="${pageContext.request.contextPath}/web/css/popuo-box.css" rel="stylesheet" type="text/css"
 	media="all" />
 <!-- //pop-up -->
 <!-- font-awesome icons -->
-<link rel="stylesheet" href="css/font-awesome.min.css" />
+<link rel="stylesheet" href="${pageContext.request.contextPath}/web/css/font-awesome.min.css" />
 <!-- //font-awesome icons -->
 <!-- js -->
-<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/web/js/jquery-2.1.4.min.js"></script>
 <!-- //js -->
 <!-- banner-bottom-plugin -->
-<link href="css/owl.carousel.css" rel="stylesheet" type="text/css"
+<link href="${pageContext.request.contextPath}/web/css/owl.carousel.css" rel="stylesheet" type="text/css"
 	media="all">
 <link rel="stylesheet"
 	href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <link rel="stylesheet" href="/resources/demos/style.css">
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<script src="js/owl.carousel.js"></script>
+<script src="${pageContext.request.contextPath}/web/js/owl.carousel.js"></script>
 </head>
 <body>
 	<%@include file="head.jsp"%>
@@ -70,7 +70,7 @@
 						<div class="browse-inner">
 							<div class="col-md-2 w3l-movie-gride-agile">
 								<a href="detail.jsp" class="hvr-shutter-out-horizontal"><img
-									src="images/m7.jpg" title="album-name" alt=" " />
+									src="${pageContext.request.contextPath}/web/images/m7.jpg" title="album-name" alt=" " />
 									<div class="w3l-action-icon">
 										<i class="fa fa-play-circle" aria-hidden="true"></i>
 									</div> </a>
@@ -108,7 +108,7 @@
 
 							<div class="col-md-2 w3l-movie-gride-agile">
 								<a href="detail.jsp" class="hvr-shutter-out-horizontal"><img
-									src="images/m8.jpg" title="album-name" alt=" " />
+									src="${pageContext.request.contextPath}/web/images/m8.jpg" title="album-name" alt=" " />
 									<div class="w3l-action-icon">
 										<i class="fa fa-play-circle" aria-hidden="true"></i>
 									</div> </a>
@@ -148,7 +148,7 @@
 
 							<div class="col-md-2 w3l-movie-gride-agile">
 								<a href="detail.jsp" class="hvr-shutter-out-horizontal"><img
-									src="images/m9.jpg" title="album-name" alt=" " />
+									src="${pageContext.request.contextPath}/web/images/m9.jpg" title="album-name" alt=" " />
 									<div class="w3l-action-icon">
 										<i class="fa fa-play-circle" aria-hidden="true"></i>
 									</div> </a>
@@ -187,7 +187,7 @@
 							</div>
 							<div class="col-md-2 w3l-movie-gride-agile">
 								<a href="detail.jsp" class="hvr-shutter-out-horizontal"><img
-									src="images/m10.jpg" title="album-name" alt=" " />
+									src="${pageContext.request.contextPath}/web/images/m10.jpg" title="album-name" alt=" " />
 									<div class="w3l-action-icon">
 										<i class="fa fa-play-circle" aria-hidden="true"></i>
 									</div> </a>
@@ -226,7 +226,7 @@
 							</div>
 							<div class="col-md-2 w3l-movie-gride-agile">
 								<a href="detail.jsp" class="hvr-shutter-out-horizontal"><img
-									src="images/m11.jpg" title="album-name" alt=" " />
+									src="${pageContext.request.contextPath}/web/images/m11.jpg" title="album-name" alt=" " />
 									<div class="w3l-action-icon">
 										<i class="fa fa-play-circle" aria-hidden="true"></i>
 									</div> </a>
@@ -265,7 +265,7 @@
 							</div>
 							<div class="col-md-2 w3l-movie-gride-agile">
 								<a href="detail.jsp" class="hvr-shutter-out-horizontal"><img
-									src="images/m12.jpg" title="album-name" alt=" " />
+									src="${pageContext.request.contextPath}/web/images/m12.jpg" title="album-name" alt=" " />
 									<div class="w3l-action-icon">
 										<i class="fa fa-play-circle" aria-hidden="true"></i>
 									</div> </a>
@@ -309,7 +309,7 @@
 						<div class="browse-inner-come-agile-w3">
 							<div class="col-md-2 w3l-movie-gride-agile">
 								<a href="detail.jsp" class="hvr-shutter-out-horizontal"><img
-									src="images/c7.jpg" title="album-name" alt=" " />
+									src="${pageContext.request.contextPath}/web/images/c7.jpg" title="album-name" alt=" " />
 									<div class="w3l-action-icon">
 										<i class="fa fa-play-circle" aria-hidden="true"></i>
 									</div> </a>
@@ -348,7 +348,7 @@
 							</div>
 							<div class="col-md-2 w3l-movie-gride-agile">
 								<a href="detail.jsp" class="hvr-shutter-out-horizontal"><img
-									src="images/c8.jpg" title="album-name" alt=" " />
+									src="${pageContext.request.contextPath}/web/images/c8.jpg" title="album-name" alt=" " />
 									<div class="w3l-action-icon">
 										<i class="fa fa-play-circle" aria-hidden="true"></i>
 									</div> </a>
@@ -387,7 +387,7 @@
 							</div>
 							<div class="col-md-2 w3l-movie-gride-agile">
 								<a href="detail.jsp" class="hvr-shutter-out-horizontal"><img
-									src="images/c9.jpg" title="album-name" alt=" " />
+									src="${pageContext.request.contextPath}/web/images/c9.jpg" title="album-name" alt=" " />
 									<div class="w3l-action-icon">
 										<i class="fa fa-play-circle" aria-hidden="true"></i>
 									</div> </a>
@@ -426,7 +426,7 @@
 							</div>
 							<div class="col-md-2 w3l-movie-gride-agile">
 								<a href="detail.jsp" class="hvr-shutter-out-horizontal"><img
-									src="images/c10.jpg" title="album-name" alt=" " />
+									src="${pageContext.request.contextPath}/web/images/c10.jpg" title="album-name" alt=" " />
 									<div class="w3l-action-icon">
 										<i class="fa fa-play-circle" aria-hidden="true"></i>
 									</div> </a>
@@ -465,7 +465,7 @@
 							</div>
 							<div class="col-md-2 w3l-movie-gride-agile">
 								<a href="detail.jsp" class="hvr-shutter-out-horizontal"><img
-									src="images/c11.jpg" title="album-name" alt=" " />
+									src="${pageContext.request.contextPath}/web/images/c11.jpg" title="album-name" alt=" " />
 									<div class="w3l-action-icon">
 										<i class="fa fa-play-circle" aria-hidden="true"></i>
 									</div> </a>
@@ -504,7 +504,7 @@
 							</div>
 							<div class="col-md-2 w3l-movie-gride-agile">
 								<a href="detail.jsp" class="hvr-shutter-out-horizontal"><img
-									src="images/c12.jpg" title="album-name" alt=" " />
+									src="${pageContext.request.contextPath}/web/images/c12.jpg" title="album-name" alt=" " />
 									<div class="w3l-action-icon">
 										<i class="fa fa-play-circle" aria-hidden="true"></i>
 									</div> </a>

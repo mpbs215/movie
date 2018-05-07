@@ -16,7 +16,7 @@
 					</address>
 				</div>
 				<div class="col-md-6 w3ls_footer_grid_right">
-					<a href="index.html"><h2>One<span>Movies</span></h2></a>
+					<a href="${pageContext.request.contextPath}/web/index.jsp"><h2>One<span>Movies</span></h2></a>
 				</div>
 				<div class="clearfix"> </div>
 			</div>
@@ -28,7 +28,7 @@
 	</div>
 <!-- //footer -->
 <!-- Bootstrap Core JavaScript -->
-<script src="js/bootstrap.min.js"></script>
+<script src="${pageContext.request.contextPath}/web/js/bootstrap.min.js"></script>
 <script>
 $(document).ready(function(){
     $(".dropdown").hover(            

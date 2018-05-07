@@ -20,7 +20,7 @@ public class InfoAction implements Action {
 			throws ServletException, IOException {
 		
 		ModelAndView mv = new ModelAndView();
-
+		mv.setPath("web/genres.jsp");
 		return mv;
 	}
 
