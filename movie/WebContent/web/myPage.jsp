@@ -38,7 +38,6 @@
 	media="all">
 <link rel="stylesheet"
 	href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-<link rel="stylesheet" href="/resources/demos/style.css">
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="${pageContext.request.contextPath}/web/js/owl.carousel.js"></script>
@@ -185,7 +184,7 @@ button{
 						</div>
 						<div class="row" style="text-align: center;">
 						  <div class="w3-col s4 w3-center" style="height:800">
-						  	<img src="2.jpg" alt="" style="width:90%;height:50%;"/>
+						  	<img src="${pageContext.request.contextPath}/web/2.jpg" alt="" style="width:90%;height:50%;"/>
 						  	<table>
 						  		<tr>
 						  			<th style="width:40%;">제목</th>
@@ -209,7 +208,7 @@ button{
 							<button class="w3-button w3-block w3-red" style="width:90%">취소하기</button>
 						  </div>
 						  <div class="w3-col s4 w3-center" style="height:800">
-						  	<img src="3.jpg" alt="" style="width:90%;height:50%;"/>
+						  	<img src="${pageContext.request.contextPath}/web/3.jpg" alt="" style="width:90%;height:50%;"/>
 						  	<table>
 						    	<tr>
 						  			<th style="width:40%;">제목</th>
@@ -231,7 +230,7 @@ button{
 						  	<button class="w3-button w3-block w3-red" style="width:90%">취소하기</button>
 						  </div>
 						  <div class="w3-col s4 w3-center" style="height:800">
-						  	<img src="4.jpg" alt="" style="width:90%;height:50%;"/>
+						  	<img src="${pageContext.request.contextPath}/web/4.jpg" alt="" style="width:90%;height:50%;"/>
 						  	<table>
 						  		<tr>
 						  			<th style="width:40%;">제목</th>
@@ -253,7 +252,7 @@ button{
 						  	<button class="w3-button w3-block w3-red" style="width:90%">취소하기</button>
 						  </div>
 						    <div class="w3-col s4 w3-center" style="height:800">
-						  	<img src="4.jpg" alt="" style="width:90%;height:50%;"/>
+						  	<img src="${pageContext.request.contextPath}/web/4.jpg" alt="" style="width:90%;height:50%;"/>
 						  	<table>
 						  		<tr>
 						  			<th style="width:40%;">제목</th>

@@ -3,7 +3,7 @@
 		<div class="header">
 		<div class="container">
 			<div class="w3layouts_logo">
-				<a href="index.jsp"><h1>One<span>Movies</span></h1></a>
+				<a href="${pageContext.request.contextPath}/web/index.jsp"><h1>One<span>Movies</span></h1></a>
 			</div>
 			<div class="w3_search">
 				<form action="#" method="post">
@@ -92,7 +92,7 @@
 				<div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
 					<nav>
 						<ul class="nav navbar-nav">
-							<li class="active"><a href="main?command=main">Home</a></li>
+							<li class="active"><a href="${pageContext.request.contextPath}/main?command=main">Home</a></li>
 							<li><a href="${pageContext.request.contextPath}/main?command=booking" >예매</a></li>
 							<li><a href="${pageContext.request.contextPath}/main?command=info">영화 정보</a></li>
 							<li><a href="${pageContext.request.contextPath}/main?command=event">이벤트</a></li>
