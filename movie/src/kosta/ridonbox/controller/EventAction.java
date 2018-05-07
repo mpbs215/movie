@@ -20,7 +20,7 @@ public class EventAction implements Action {
 			throws ServletException, IOException {
 		
 		ModelAndView mv = new ModelAndView();
-		mv.setPath("eventView.jsp");
+		mv.setPath("web/eventView.jsp");
 		return mv;
 	}
 

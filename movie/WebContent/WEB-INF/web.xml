@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" version="3.1">
   <display-name>movie</display-name>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
@@ -9,11 +9,8 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
-  
-  <!-- listener에서 사용하게 될 파일의 이름을 init로 전달한다.
-  	   ResourceBundle객체를 이용할것이므로 확장자는 생략, 경로는 classes 폴더기준 -->
-  <context-param>
-  	<param-name>fileName</param-name>
-  	<param-value>kosta/ridonbox/util/actionMapping</param-value>
+    <context-param>
+    <param-name>fileName</param-name>
+    <param-value>kosta/ridonbox/util/actionMapping</param-value>
   </context-param>
 </web-app>
