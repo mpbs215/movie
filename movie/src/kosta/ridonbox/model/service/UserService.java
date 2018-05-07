@@ -15,7 +15,7 @@ public interface UserService {
 	 * @param password 로그인할 사용자비밀번호 
 	 * @return 로그인되었는지 안되었는지 확
 	 */
-	public void loginMember(String id,String password) throws SQLException;
+	public int loginMember(String id,String password) throws SQLException;
 	
 	/**
 	 * 회원가입 
@@ -23,7 +23,15 @@ public interface UserService {
 	 * @return 회원가입되었는지 안되었는지 확인.
 	 * @throws SQLException
 	 */
-	public void joinMember(MemberDTO memberDTO) throws SQLException;
+	public int joinMember(MemberDTO memberDTO) throws SQLException;
+	
+	/**
+	 * 아이디 중복체크
+	 * @param memberID
+	 * @return 1이면 아이디 중복, 0이면 사용가능
+	 * @throws SQLException
+	 */
+	public int checkById(String id) throws SQLException;
 	
 	/**
 	 *메인페이지에서 BoxOffice순으로 영화보여줌.
@@ -66,17 +74,21 @@ public interface UserService {
 	/**
 	 * 사용자(고객) 정보를 보여주기 위함 
 	 * @return	memberId (사용자 아이디)
+	 * @throws SQLException 
 	 * @throws MemberDTO 
 	 */
-	public MemberDTO memberInfo(String memberId);
+	public MemberDTO memberInfo(String memberId) throws SQLException;
 	
 	/**수정*/
 	/**
 	 * 사용자(고객) 예매 정보를 보여주기 위함  
 	 * @return	memberId (사용자 아이디) 
+	 * @throws SQLException 
 	 * @throws List<BookDTO> (현 사용자의 예매 dto 리스트로 리턴)
 	 */
-	public List<BookDTO> memberbyBookList(String memberId);
+	public List<BookDTO> memberbyBookList(String memberId) throws SQLException;
+
+	int myPageByMemberUpdate(MemberDTO memberDTO) throws SQLException;
 
 	//영화관 정보 (보류)
 	

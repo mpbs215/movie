@@ -5,50 +5,51 @@ import java.sql.SQLException;
 import kosta.ridonbox.model.dto.BranchDTO;
 import kosta.ridonbox.model.dto.EventDTO;
 import kosta.ridonbox.model.dto.MovieDTO;
+import kosta.ridonbox.model.dto.ScreenDTO;
 
 public interface AdminDAO {
 	
 	/**
 	 * 이벤트 등록
 	 * @param evetDAO 
-	 * @return boolean : true - 성공, false - 실패
+	 * @return int : 1 이상 - 성공, 0 - 실패
 	 */
-	public boolean evetInsert(EventDTO evetDTO) throws SQLException;
+	public int eventInsert(EventDTO eventDTO) throws SQLException;
 	
 	/**
 	 * 이벤트 업데이트
 	 * @param evetNo (pk)
-	 * @return EventDTO (수정된 dto를 넘겨받아 출력)
+	 * @return int : 1 이상 - 성공, 0 - 실패
 	 */
-	public EventDTO evetUpdate(int evetNo) throws SQLException;
+	public int eventUpdate(EventDTO eventDTO) throws SQLException;
 
 	/**
 	 * 이벤트 삭제
 	 * @param evetNo (pk)
-	 * @return boolean : true - 성공, false - 실패
+	 * @return int : 1 이상 - 성공, 0 - 실패
 	 */
-	public boolean evetDelete(int evetNo) throws SQLException;
+	public int eventDelete(int eventNo) throws SQLException;
 
 	/**
 	 * 영화 등록
 	 * @param MovieDTO
 	 * @return boolean : true - 성공, false - 실패
 	 */
-	public boolean movieInsert(MovieDTO movieDTO) throws SQLException;
+	public int movieInsert(MovieDTO movieDTO) throws SQLException;
 
 	/**
 	 * 영화 수정
 	 * @param movieNo (pk)
 	 * @return boolean : true - 성공, false - 실패
 	 */
-	public boolean movieUpdate(int movieNo) throws SQLException;
+	public int movieUpdate(MovieDTO movieNo) throws SQLException;
 
 	/**
 	 * 상영 시간표 정보 등록
 	 * @param BranchDTO 
 	 * @return boolean : true - 성공, false - 실패
 	 */
-	public boolean branchInsert(BranchDTO branchDTO) throws SQLException;
+	public int branchInsert(ScreenDTO screenDTO) throws SQLException;
 
 	/**
 	 * 상영 시간표 정보 수정

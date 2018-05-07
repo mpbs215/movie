@@ -92,7 +92,7 @@
 				<div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
 					<nav>
 						<ul class="nav navbar-nav">
-							<li class="active"><a href="${pageContext.request.contextPath}/main?command=main">Home</a></li>
+							<li><a href="${pageContext.request.contextPath}/main?command=main">Home</a></li>
 							<li><a href="${pageContext.request.contextPath}/main?command=booking" >예매</a></li>
 							<li><a href="${pageContext.request.contextPath}/main?command=info">영화 정보</a></li>
 							<li><a href="${pageContext.request.contextPath}/main?command=event">이벤트</a></li>

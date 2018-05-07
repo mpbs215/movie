@@ -14,21 +14,21 @@ public interface AdminService {
 		 * @param evetDAO 
 		 * @return int형으로 1 이상이면 성공, 0이면 실패
 		 */
-		public int evetInsert(EventDTO evetDTO) throws SQLException;
+		public int eventInsert(EventDTO evetDTO) throws SQLException;
 		
 		/**
 		 * 이벤트 수정
 		 * @param evetDAO 
 		 * @return int형으로 1 이상이면 성공, 0이면 실패
 		 */
-		public int evetUpdate(EventDTO evetNo) throws SQLException;
+		public int eventUpdate(EventDTO evetNo) throws SQLException;
 
 		/**
 		 * 이벤트 삭제
 		 * @param evetNo (pk) 
 		 * @return int형으로 1 이상이면 성공, 0이면 실패
 		 */
-		public int evetDelete(int evetNo) throws SQLException;
+		public int eventDelete(int evetNo) throws SQLException;
 		
 		/**
 		 * 영화 등록
@@ -42,7 +42,7 @@ public interface AdminService {
 		 * @param movieNo(pk)
 		 * @return int형으로 1 이상이면 성공, 0이면 실패
 		 */
-		public int movieDelete(int movieNo) throws SQLException;
+		public int movieUpdate(MovieDTO movieDTO) throws SQLException;
 
 		/**
 		 * 상영관 등록
@@ -64,4 +64,6 @@ public interface AdminService {
 		 * @return int형으로 1 이상이면 성공, 0이면 실패
 		 */
 		public int branchDelete(int branchNo) throws SQLException;
+
+		int movieDelete(int movieNo) throws SQLException;
 }

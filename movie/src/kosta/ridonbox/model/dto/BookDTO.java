@@ -1,50 +1,61 @@
 package kosta.ridonbox.model.dto;
 
 public class BookDTO {
-	private int cinemaNo;		//pk
-	private String movieTitle;	//제목
-	private String auditorium;  //좌석?
-	private String date;		//개봉일?
+	private String bookNo;			//예매번호.
+	private String memberId;		//회원아이디
+	private String movieNo;		//영화번호
+	private String AuditoriumNo;	//상영관이름.
+	private String screenNo;  //상영광번호.		
 	private String ticketNum;	//예매번호
 	
-	public BookDTO(int cinemaNo, String movieTitle, String auditorium, String date, String ticketNum) {
-		this.cinemaNo = cinemaNo;
-		this.movieTitle = movieTitle;
-		this.auditorium = auditorium;
-		this.date = date;
+	public BookDTO(String bookNo, String memberId, String movieNo, String auditoriumNo, String screenNo,
+			String ticketNum) {
+		this.bookNo = bookNo;
+		this.memberId = memberId;
+		this.movieNo = movieNo;
+		AuditoriumNo = auditoriumNo;
+		this.screenNo = screenNo;
 		this.ticketNum = ticketNum;
 	}
 
-	public int getCinemaNo() {
-		return cinemaNo;
+	public String getBookNo() {
+		return bookNo;
 	}
 
-	public void setCinemaNo(int cinemaNo) {
-		this.cinemaNo = cinemaNo;
+	public void setBookNo(String bookNo) {
+		this.bookNo = bookNo;
 	}
 
-	public String getMovieTitle() {
-		return movieTitle;
+	public String getMemberId() {
+		return memberId;
 	}
 
-	public void setMovieTitle(String movieTitle) {
-		this.movieTitle = movieTitle;
+	public void setMemberId(String memberId) {
+		this.memberId = memberId;
 	}
 
-	public String getAuditorium() {
-		return auditorium;
+	public String getMovieNo() {
+		return movieNo;
 	}
 
-	public void setAuditorium(String auditorium) {
-		this.auditorium = auditorium;
+	public void setMovieNo(String movieNo) {
+		this.movieNo = movieNo;
 	}
 
-	public String getDate() {
-		return date;
+	public String getAuditoriumNo() {
+		return AuditoriumNo;
 	}
 
-	public void setDate(String date) {
-		this.date = date;
+	public void setAuditoriumNo(String auditoriumNo) {
+		AuditoriumNo = auditoriumNo;
+	}
+
+	public String getScreenNo() {
+		return screenNo;
+	}
+
+	public void setScreenNo(String screenNo) {
+		this.screenNo = screenNo;
 	}
 
 	public String getTicketNum() {
@@ -54,4 +65,5 @@ public class BookDTO {
 	public void setTicketNum(String ticketNum) {
 		this.ticketNum = ticketNum;
 	}
+	
 }
