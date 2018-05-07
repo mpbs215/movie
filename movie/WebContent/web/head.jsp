@@ -37,7 +37,7 @@
 							  </div>
 							  <div class="form">
 								<h3>회원 로그인</h3>
-								<form action="main?commend=login" method="post">
+								<form action="main?command=login" method="post">
 								  <input type="text" name="Username" placeholder="아이디를 입력해주세요." required="">
 								  <input type="password" name="Password" placeholder="암호를 입력하세요" required="">
 								  <input type="submit" value="로그인">
@@ -45,7 +45,7 @@
 							  </div>
 							  <div class="form">
 								<h3>회원 가입</h3>
-								<form action="main?commend=regist" method="post">
+								<form action="main?command=regist" method="post">
 								  <input type="text" name="Username" placeholder="아이디" required="">
 								  <input type="password" name="Password" placeholder="패스워드" required="">
 								  <input type="password" name="Password2" placeholder="패스워드 확인" required="">
@@ -92,13 +92,13 @@
 				<div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
 					<nav>
 						<ul class="nav navbar-nav">
-							<li class="active"><a href="main?commend=main">Home</a></li>
-							<li><a href="main?commend=booking" >예매</a></li>
-							<li><a href="main?commend=info">영화 정보</a></li>
-							<li><a href="main?commend=event">이벤트</a></li>
-							<li><a href="main?commend=myPage">MyPage</a></li>
-							<li><a href="main?commend=QA">Q&A</a></li>
-							<li><a href="main?commend=faq">FAQ</a></li>
+							<li class="active"><a href="main?command=main">Home</a></li>
+							<li><a href="${pageContext.request.contextPath}/main?command=booking" >예매</a></li>
+							<li><a href="main?command=info">영화 정보</a></li>
+							<li><a href="${pageContext.request.contextPath}/main?command=event">이벤트</a></li>
+							<li><a href="main?command=myPage">MyPage</a></li>
+							<li><a href="main?command=QA">Q&A</a></li>
+							<li><a href="main?command=faq">FAQ</a></li>
 						</ul>
 					</nav>
 				</div>
