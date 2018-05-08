@@ -21,7 +21,7 @@ public class BookingAction implements Action {
 
 		ModelAndView mv = new ModelAndView();
 		mv.setPath("web/bookingview.jsp");
-
+		String test;
 		return mv;
 	}
 
