@@ -178,7 +178,7 @@ public class UserDAOImpl implements UserDAO {
 		ps = con.prepareStatement("select * from reservation where MEMBER_ID =?");
 		ps.setString(1, id);
 		rs=ps.executeQuery();
-		
+		String test = "test";
 		while(rs.next()) { 
 			list.add(new BookDTO(rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getString(6)));
 		}
