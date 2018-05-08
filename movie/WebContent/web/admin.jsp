@@ -96,9 +96,12 @@ input[type=file] {
 }
 </style>
 <!-- start-smoth-scrolling -->
+												
+
 </head>
 
 <body>
+
 	<!-- header -->
 	<div class="header">
 		<div class="container">
@@ -145,10 +148,13 @@ input[type=file] {
 								<div class="form">
 									<h3>회원 로그인</h3>
 									<form action="#" method="post">
+									
+								
 										<input type="text" name="Username" placeholder="아이디를 입력해주세요."
 											required=""> <input type="password" name="Password"
 											placeholder="암호를 입력하세요" required=""> <input
 											type="submit" value="로그인">
+\								
 									</form>
 								</div>
 								<div class="form">

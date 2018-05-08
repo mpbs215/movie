@@ -13,11 +13,20 @@
 			</div>
 			<div class="w3l_sign_in_register">
 				<ul>
-					<li><a href="#" data-toggle="modal" data-target="#myModal">Login</a></li>
+					<li><a href="#" data-toggle="modal" data-target="#myModal" id="loginform">Login</a></li>
 				</ul>
 			</div>
 			<div class="clearfix"> </div>
 		</div>
+	<%if(session.getAttribute("id")!=null){
+		 System.out.print("세션존재");
+		 
+	}else{
+		System.out.print("세션없음");
+	}
+	%>	
+
+		
 	</div>
 <!-- //header -->
 <!-- bootstrap-pop-up 로그인 팝업 -->
@@ -35,14 +44,28 @@
 							  <div class="toggle"><i class="fa fa-times fa-pencil"></i>
 								<div class="tooltip">회원가입</div>
 							  </div>
-							  <div class="form">
+							  <div class="form" >
 								<h3>회원 로그인</h3>
 								<form action="${pageContext.request.contextPath}/main?command=login" method="post">
 								  <input type="text" name="Username" placeholder="아이디를 입력해주세요." required="">
 								  <input type="password" name="Password" placeholder="암호를 입력하세요" required="">
-								  <input type="submit" value="로그인">
+								  <input type="submit" value="로그인" >
 								</form>
 							  </div>
+
+								 
+								 <%
+									 if(session.getAttribute("id")!=null){
+								%>
+									<script type="text/javascript">
+										var x = document.getElementById('loginform');
+										alert(11);
+										x.innerText="LogOut";				
+									</script>      
+								<%
+									 }
+								%>
+
 							  <div class="form">
 								<h3>회원 가입</h3>
 								<form action="${pageContext.request.contextPath}/main?command=regist" method="post">
@@ -74,6 +97,9 @@
 			opacity: "toggle"
 		  }, "slow");
 		});
+		
+		
+	
 	</script>
 <!-- //bootstrap-pop-up 로그인 팝업-->
 <!-- 상단 메뉴 -->
