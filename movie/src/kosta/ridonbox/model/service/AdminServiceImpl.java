@@ -9,6 +9,7 @@ import kosta.ridonbox.model.dto.BranchDTO;
 import kosta.ridonbox.model.dto.EventDTO;
 import kosta.ridonbox.model.dto.MovieDTO;
 import kosta.ridonbox.model.dto.MovieScreenDTO;
+import kosta.ridonbox.model.dto.TheaterDTO;
 
 public class AdminServiceImpl implements AdminService {
 	private static AdminDAO adminDAO = new AdminDAOImpl();
@@ -37,9 +38,11 @@ public class AdminServiceImpl implements AdminService {
 
 
 	@Override
-	public int movieDelete(int movieNo) throws SQLException {
-		// TODO Auto-generated method stub
-		return 0;
+	public int movieDelete(String movieNo) throws SQLException {
+		int result = adminDAO.movieDelete(movieNo);
+		if(result==0) {
+		}
+		return result;
 	}
 
 	@Override
@@ -78,6 +81,16 @@ public class AdminServiceImpl implements AdminService {
 	@Override
 	public List<MovieScreenDTO> movieList() throws SQLException{
 		List<MovieScreenDTO> list = adminDAO.movieList();
+		if(list==null || list.size()==0) {
+			throw new SQLException();
+		}
+		
+		return list;
+	}
+	
+	@Override
+	public List<TheaterDTO> theaterList() throws SQLException{
+		List<TheaterDTO> list = adminDAO.theaterList();
 		if(list==null || list.size()==0) {
 			throw new SQLException();
 		}

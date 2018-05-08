@@ -7,6 +7,7 @@ import kosta.ridonbox.model.dto.BranchDTO;
 import kosta.ridonbox.model.dto.EventDTO;
 import kosta.ridonbox.model.dto.MovieDTO;
 import kosta.ridonbox.model.dto.MovieScreenDTO;
+import kosta.ridonbox.model.dto.TheaterDTO;
 
 public interface AdminService {
 		
@@ -67,7 +68,9 @@ public interface AdminService {
 		 */
 		public int branchDelete(int branchNo) throws SQLException;
 
-		int movieDelete(int movieNo) throws SQLException;
+		int movieDelete(String movieNo) throws SQLException;
 
 		List<MovieScreenDTO> movieList() throws SQLException;
+
+		List<TheaterDTO> theaterList() throws SQLException;
 }

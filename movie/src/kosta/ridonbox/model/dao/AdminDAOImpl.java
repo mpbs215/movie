@@ -12,6 +12,7 @@ import kosta.ridonbox.model.dto.EventDTO;
 import kosta.ridonbox.model.dto.MovieDTO;
 import kosta.ridonbox.model.dto.MovieScreenDTO;
 import kosta.ridonbox.model.dto.ScreenDTO;
+import kosta.ridonbox.model.dto.TheaterDTO;
 import kosta.ridonbox.util.DbUtil;
 
 public class AdminDAOImpl implements AdminDAO {
@@ -132,41 +133,87 @@ public class AdminDAOImpl implements AdminDAO {
 	}
 
 	@Override
-	public List<MovieScreenDTO> movieList() throws SQLException{
+	public List<MovieScreenDTO> movieList() throws SQLException {
 		Connection con = null;
 		PreparedStatement ps = null;
 		ResultSet rs = null;
 		List<MovieScreenDTO> list = new ArrayList<>();
-		
+
 		try {
 			con = DbUtil.getConnection();
 			ps = con.prepareStatement("select*from movie_info natural join screen_info");
 			rs = ps.executeQuery();
-			
-			while(rs.next()) {
-				int movieNo = rs.getInt("movie_num");
-				String title = rs.getString("movie_title");
-				String titleEnglish = rs.getString("movie_etitle");
-				String director = rs.getString("movie_dir");
-				String actor = rs.getString("movie_act");
-				String releasedate = rs.getString("movie_date");
-				String imgPath = rs.getString("movie_path");
-				int grade = rs.getInt("movie_rat");
-				int state = rs.getInt("movie_state");
+
+			while (rs.next()) {
+				String movie_num = rs.getString("movie_num");
+				String movie_title = rs.getString("movie_title");
+				String movie_etitle = rs.getString("movie_etitle");
+				String movie_dir = rs.getString("movie_dir");
+				String movie_act = rs.getString("movie_act");
+				String movie_date = rs.getString("movie_date");
+				String movie_path = rs.getString("movie_path");
+				String movie_youtube = rs.getString("movie_youtube");
+				int movie_rat = rs.getInt("movie_rat");
+				int movie_state = rs.getInt("movie_state");
 				String screenNum = rs.getString("screen_num");
 				String theaterName = rs.getString("theater_name");
 				String screenDate = rs.getString("screen_date");
 				int revTotal = rs.getInt("rev_total");
-				
-				MovieScreenDTO dto=new MovieScreenDTO(movieNo, title, titleEnglish, director, actor, releasedate, imgPath, grade, state, screenNum, theaterName, screenDate, revTotal);
+
+				MovieScreenDTO dto = new MovieScreenDTO(movie_num, movie_title, movie_etitle, movie_dir, movie_act,
+						movie_date, movie_rat, movie_path, movie_youtube, movie_state, screenNum, theaterName,
+						screenDate, revTotal);
+
 				list.add(dto);
 			}
 		} finally {
 			DbUtil.dbClose(con, ps, rs);
 		}
-		
+
 		return list;
 	}
-	
+
+	@Override
+	public List<TheaterDTO> theaterList() throws SQLException {
+		Connection con = null;
+		PreparedStatement ps = null;
+		ResultSet rs = null;
+		List<TheaterDTO> list = new ArrayList<>();
+
+		try {
+			con = DbUtil.getConnection();
+			ps = con.prepareStatement("select*from theater");
+			rs = ps.executeQuery();
+
+			while (rs.next()) {
+				String theaterName = rs.getString(1);
+				int theaterTotal = rs.getInt(2);
+				TheaterDTO dto = new TheaterDTO(theaterName, theaterTotal);
+				list.add(dto);
+			}
+		} finally {
+			DbUtil.dbClose(con, ps, rs);
+		}
+		return list;
+	}
+
+	@Override
+	public int movieDelete(String movieNo) throws SQLException {
+		Connection con = null;
+		PreparedStatement ps=null;
+		int result=0;
+		
+		try {
+			con = DbUtil.getConnection();
+			ps = con.prepareStatement("delete from movie_info where movie_num=?");
+			ps.setString(1, movieNo);
+			
+			result=ps.executeUpdate();
+		} finally {
+			DbUtil.dbClose(con, ps);
+		}
+
+		return result;
+	}
 
 }

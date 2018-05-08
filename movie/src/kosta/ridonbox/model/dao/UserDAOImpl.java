@@ -105,7 +105,7 @@ public class UserDAOImpl implements UserDAO {
 		rs = ps.executeQuery();
 		
 		if(rs.next()) {
-			dto = new MovieDTO(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getString(6), rs.getString(7), rs.getInt(8), rs.getInt(9));
+			dto = new MovieDTO(rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getString(6), rs.getInt(7), rs.getString(8), rs.getString(9),rs.getInt(10));
 		}
 		
 		DbUtil.dbClose(con, ps, rs);
@@ -178,7 +178,7 @@ public class UserDAOImpl implements UserDAO {
 		ps = con.prepareStatement("select * from reservation where MEMBER_ID =?");
 		ps.setString(1, id);
 		rs=ps.executeQuery();
-		
+		String test = "test";
 		while(rs.next()) { 
 			list.add(new BookDTO(rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getString(6)));
 		}
