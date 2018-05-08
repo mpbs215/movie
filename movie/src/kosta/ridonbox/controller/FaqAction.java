@@ -22,6 +22,9 @@ public class FaqAction implements Action {
 		
 		ModelAndView mv = new ModelAndView();
 		mv.setPath("web/faq.jsp");
+		
+		
+		
 		return mv;
 	}
 
