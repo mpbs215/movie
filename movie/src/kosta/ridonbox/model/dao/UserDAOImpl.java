@@ -22,14 +22,15 @@ public class UserDAOImpl implements UserDAO {
 		Connection con = null;
 		PreparedStatement ps = null;
 		ResultSet rs = null;
-		String sql="select * from member where id=? and password=?";
+		String sql="select * from member where member_id=? and member_password=?";
 		
 		con = DbUtil.getConnection();
 		ps = con.prepareStatement(sql);
-		rs = ps.executeQuery();
 		ps.setString(1, id);
 		ps.setString(2, password);
 		
+		rs = ps.executeQuery();
+	
 		if(rs.next()) {	
 			re = 1;
 		}
@@ -43,17 +44,17 @@ public class UserDAOImpl implements UserDAO {
 		
 		Connection con = null;
 		PreparedStatement ps = null;
-		String sql="insert into member values(?, ?, ?, ?, ?)";
+		String sql="insert into member (member_id, member_password, member_email, member_phone, member_date)values(?, ?, ?, ?, sysdate)";
 		
 		con = DbUtil.getConnection();
 		ps = con.prepareStatement(sql);
 		int re=0 ;
-		
+		//System.out.println("JoinDate() = "+memberDTO.getJoinDate());
 			ps.setString(1, memberDTO.getMemberId());
 			ps.setString(2, memberDTO.getMemberPwd());
 			ps.setString(3, memberDTO.getEmail());
 			ps.setString(4, memberDTO.getPhone());
-			ps.setString(5, memberDTO.getJoinDate());		
+		//	ps.setString(5, memberDTO.getJoinDate());		
 			
 		re = ps.executeUpdate();
 		DbUtil.dbClose(con, ps);
@@ -83,8 +84,22 @@ public class UserDAOImpl implements UserDAO {
 
 	@Override
 	public List<MovieDTO> showByBoxoffice() throws SQLException {
-		// TODO Auto-generated method stub
-		return null;
+		Connection con = DbUtil.getConnection();
+		PreparedStatement ps =null;
+		ResultSet rs =null;
+		List<MovieDTO> list = new ArrayList<MovieDTO>();
+		try{
+			 ps = con.prepareStatement( "select * from movie_info");
+			 rs = ps.executeQuery();
+			 while(rs.next()){
+				 MovieDTO movie = new MovieDTO(rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getString(6), rs.getInt(7), rs.getString(8), rs.getString(9), rs.getInt(10));
+				 
+			    list.add(movie);
+			 }
+		}finally{
+			DbUtil.dbClose(con, ps, rs);
+		}
+		return list;
 	}
 
 	@Override
@@ -105,7 +120,11 @@ public class UserDAOImpl implements UserDAO {
 		rs = ps.executeQuery();
 		
 		if(rs.next()) {
+<<<<<<< HEAD
 			dto = new MovieDTO(rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getString(6), rs.getInt(7), rs.getString(8), rs.getString(9),rs.getInt(10));
+=======
+			dto = new MovieDTO(rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getString(6), rs.getInt(7), rs.getString(8), rs.getString(9), rs.getInt(10));
+>>>>>>> branch 'master' of https://github.com/mpbs215/movie
 		}
 		
 		DbUtil.dbClose(con, ps, rs);

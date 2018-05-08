@@ -15,6 +15,8 @@ public class MemberDTO {
 		this.joinDate = joinDate;
 	}
 
+	public MemberDTO() {}
+
 	public String getMemberId() {
 		return memberId;
 	}

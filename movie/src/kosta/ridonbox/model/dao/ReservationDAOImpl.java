@@ -124,8 +124,13 @@ public class ReservationDAOImpl implements ReservationDAO {
 					ps.setString(1, reservationDTO.getRevNum());
 					ps.setString(2, memberDTO.getMemberId());
 					ps.setString(3, movieDTO.getMovie_num());
+<<<<<<< HEAD
 					ps.setString(4, screenDTO.getTheaterName());
 					ps.setString(5, screenDTO.getScreenNum());
+=======
+					ps.setString(4, screenDTO.getTheater_name());
+					ps.setString(5, screenDTO.getScreen_num());
+>>>>>>> branch 'master' of https://github.com/mpbs215/movie
 					ps.setInt(6, reservationDTO.getRevPep());
 					
 					result = ps.executeUpdate();

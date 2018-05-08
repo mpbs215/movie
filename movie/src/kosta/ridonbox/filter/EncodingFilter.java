@@ -28,6 +28,10 @@ public class EncodingFilter implements Filter {
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
 	    request.setCharacterEncoding(encoding);
 	    response.setContentType("text/html;charset=UTF-8");
+<<<<<<< HEAD
+=======
+
+>>>>>>> branch 'master' of https://github.com/mpbs215/movie
 	
 	    chain.doFilter(request, response);
 	}
