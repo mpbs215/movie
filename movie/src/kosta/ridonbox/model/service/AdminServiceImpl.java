@@ -1,15 +1,17 @@
 package kosta.ridonbox.model.service;
 
 import java.sql.SQLException;
+import java.util.List;
 
 import kosta.ridonbox.model.dao.AdminDAO;
 import kosta.ridonbox.model.dao.AdminDAOImpl;
 import kosta.ridonbox.model.dto.BranchDTO;
 import kosta.ridonbox.model.dto.EventDTO;
 import kosta.ridonbox.model.dto.MovieDTO;
+import kosta.ridonbox.model.dto.MovieScreenDTO;
 
 public class AdminServiceImpl implements AdminService {
-	private AdminDAO adminDAO = new AdminDAOImpl();
+	private static AdminDAO adminDAO = new AdminDAOImpl();
 
 	@Override
 	public int eventInsert(EventDTO eventDTO) throws SQLException {
@@ -65,12 +67,22 @@ public class AdminServiceImpl implements AdminService {
 		if(result == 0) throw new SQLException("등록되지 않았습니다.");
 		return result;
 	}
-
+	
 	@Override
 	public int movieUpdate(MovieDTO movieDTO) throws SQLException {
 		int result = adminDAO.movieUpdate(movieDTO);
 		if(result==0) throw new SQLException("수정되지 않았습니다.");
 		return result;
+	}
+	
+	@Override
+	public List<MovieScreenDTO> movieList() throws SQLException{
+		List<MovieScreenDTO> list = adminDAO.movieList();
+		if(list==null || list.size()==0) {
+			throw new SQLException();
+		}
+		
+		return list;
 	}
 
 }

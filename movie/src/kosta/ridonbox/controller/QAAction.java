@@ -20,6 +20,7 @@ public class QAAction implements Action {
 			throws ServletException, IOException {
 
 		ModelAndView mv = new ModelAndView();
+		
 		mv.setPath("web/QAboard.jsp");
 		return mv;
 	}

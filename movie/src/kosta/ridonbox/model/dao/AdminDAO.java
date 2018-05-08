@@ -1,10 +1,12 @@
 package kosta.ridonbox.model.dao;
 
 import java.sql.SQLException;
+import java.util.List;
 
 import kosta.ridonbox.model.dto.BranchDTO;
 import kosta.ridonbox.model.dto.EventDTO;
 import kosta.ridonbox.model.dto.MovieDTO;
+import kosta.ridonbox.model.dto.MovieScreenDTO;
 import kosta.ridonbox.model.dto.ScreenDTO;
 
 public interface AdminDAO {
@@ -57,6 +59,8 @@ public interface AdminDAO {
 	 * @return boolean : true - 성공, false - 실패
 	 */
 	public BranchDTO branchUpdate(int branchNo) throws SQLException;
+
+	List<MovieScreenDTO> movieList() throws SQLException;
 
 
 }

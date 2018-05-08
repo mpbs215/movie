@@ -2,11 +2,11 @@ package kosta.ridonbox.model.dto;
 
 public class ScreenDTO {
 	
-	private String screenNum;
-	private String movieNum;
-	private String theaterName;
-	private String screenDate;
-	private int revTotal;
+	private String screenNum; //상영번호
+	private String movieNum; //영화번호
+	private String theaterName; //상영관이름
+	private String screenDate; //상영날짜 및 시간
+	private int revTotal; //총예매수
 	
 	public ScreenDTO() {}
 	

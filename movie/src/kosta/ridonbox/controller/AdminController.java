@@ -15,8 +15,8 @@ import kosta.ridonbox.model.dto.ModelAndView;
 /**
  * Servlet implementation class FrontController
  */
-@WebServlet("/main")
-public class FrontController extends HttpServlet {
+@WebServlet("/admin")
+public class AdminController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	Map<String, Action> map;
 
