@@ -158,7 +158,7 @@ ALTER TABLE screen_info
 		)
 		REFERENCES movie_info (
 			movie_num
-		);
+		)on delete cascade;
 
 ALTER TABLE screen_info
 	ADD
@@ -168,7 +168,7 @@ ALTER TABLE screen_info
 		)
 		REFERENCES theater (
 			theater_name
-		);
+		)on delete cascade;
 
 ALTER TABLE reservation
 	ADD
@@ -178,7 +178,7 @@ ALTER TABLE reservation
 		)
 		REFERENCES member (
 			member_id
-		);
+		)on delete cascade;
 
 ALTER TABLE reservation
 	ADD
@@ -188,7 +188,7 @@ ALTER TABLE reservation
 		)
 		REFERENCES movie_info (
 			movie_num
-		);
+		)on delete cascade;
 
 ALTER TABLE reservation
 	ADD
@@ -202,7 +202,7 @@ ALTER TABLE reservation
 			screen_num,
 			movie_num,
 			theater_name
-		);
+		)on delete cascade;
 
 ALTER TABLE board
 	ADD
@@ -212,7 +212,7 @@ ALTER TABLE board
 		)
 		REFERENCES member (
 			member_id
-		);
+		)on delete cascade;
 		
 		
 --------------------------------------------------------------------------------

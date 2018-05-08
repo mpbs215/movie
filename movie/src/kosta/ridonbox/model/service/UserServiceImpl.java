@@ -19,6 +19,7 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public List<MovieDTO> showByBoxoffice() throws SQLException {
 		List<MovieDTO> list = userDAO.showByBoxoffice();
+		if(list==null) throw new SQLException("해당하는 영화리스트 정보가 없습니다.");
 		  return list;
 	}
 
