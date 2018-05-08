@@ -66,6 +66,7 @@
 		$("#video").simplePlayer();
 	});
 </script>
+
 <!-- start-smoth-scrolling -->
 <style>
 .header {
@@ -94,31 +95,31 @@ th{
 
 				<div class="card mb-4">
 					<div class="video-grid-single-page-agileits">
-						<div data-video="xUDhdCsLkjU" id="video">
-							<img src="${pageContext.request.contextPath}/web/images/5.jpg" alt="" class="img-responsive" />
+						<div data-video="${movie.movie_youtube}" id="video">
+							<img src="${movie.movie_path}" alt="" class="img-responsive" />
 						</div>
 					</div>
 				</div>
 				<table class="table">
 					<tr>
 						<th style="color: white;">영화제목</th>
-						<td>project</td>
+						<td>${movie.movie_title}</td>
 					</tr>
 					<tr>
 						<th style="color: white">감독</th>
-						<td>존슨</td>
+						<td>${movie.movie_dir}</td>
 					</tr>
 					<tr>
 						<th style="color: white">개봉일</th>
-						<td>2018-05-08</td>
+						<td>${movie.movie_date}</td>
 					</tr>
 					<tr>
 						<th style="color: white">평점</th>
-						<td>4.5</td>
+						<td>${movie.movie_rat}</td>
 					</tr>
 					<tr>
 						<th style="color: white">배우</th>
-						<td>김돈황</td>
+						<td>${movie.movie_act}</td>
 					</tr>
 					<tr>
 						<th style="color: white">줄거리</th>
