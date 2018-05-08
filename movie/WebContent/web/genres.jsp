@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
 <meta charset="UTF-8">
@@ -44,6 +45,8 @@
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="${pageContext.request.contextPath}/web/js/owl.carousel.js"></script>
+<script type="text/javascript">
+</script>
 </head>
 <body>
 	<%@include file="head.jsp"%>
@@ -68,33 +71,27 @@
 					</div>
 					<div class="container">
 						<div class="browse-inner">
+						
+						<c:forEach items="${movielist}" var="movielist">
+						
 							<div class="col-md-2 w3l-movie-gride-agile">
-								<a href="detail.jsp" class="hvr-shutter-out-horizontal"><img
-									src="${pageContext.request.contextPath}/web/images/m7.jpg" title="album-name" alt=" " />
+								<a href="${pageContext.request.contextPath}/main?command=detail&movieNum=${movielist.movie_num}" class="hvr-shutter-out-horizontal"><img
+									src="${movielist.movie_path}" title="album-name" alt=" " />
 									<div class="w3l-action-icon">
 										<i class="fa fa-play-circle" aria-hidden="true"></i>
 									</div> </a>
 								<div class="mid-1">
 									<div class="w3l-movie-text">
 										<h6>
-											<a href="detail.jsp">Light B/t Oceans</a>
+											<a href="${pageContext.request.contextPath}/main?command=detail&movieNum=${movielist.movie_num}">${movielist.movie_title }</a>
 										</h6>
 									</div>
 									<div class="mid-2">
 
-										<p>2016</p>
+										<p>개봉일 : ${movielist.movie_date}</p>
 										<div class="block-stars">
 											<ul class="w3l-ratings">
-												<li><a href="#"><i class="fa fa-star"
-														aria-hidden="true"></i></a></li>
-												<li><a href="#"><i class="fa fa-star"
-														aria-hidden="true"></i></a></li>
-												<li><a href="#"><i class="fa fa-star"
-														aria-hidden="true"></i></a></li>
-												<li><a href="#"><i class="fa fa-star-half-o"
-														aria-hidden="true"></i></a></li>
-												<li><a href="#"><i class="fa fa-star-o"
-														aria-hidden="true"></i></a></li>
+												평점 : ${movielist.movie_rat }
 											</ul>
 										</div>
 										<div class="clearfix"></div>
@@ -105,9 +102,13 @@
 
 								</div>
 							</div>
-
+						</c:forEach>
+						
+						
+						
+						
 							<div class="col-md-2 w3l-movie-gride-agile">
-								<a href="detail.jsp" class="hvr-shutter-out-horizontal"><img
+								<a href="${pageContext.request.contextPath}/web/${pageContext.request.contextPath}/web/detail.jsp" class="hvr-shutter-out-horizontal"><img
 									src="${pageContext.request.contextPath}/web/images/m8.jpg" title="album-name" alt=" " />
 									<div class="w3l-action-icon">
 										<i class="fa fa-play-circle" aria-hidden="true"></i>
@@ -115,7 +116,7 @@
 								<div class="mid-1">
 									<div class="w3l-movie-text">
 										<h6>
-											<a href="detail.jsp">The BFG</a>
+											<a href="${pageContext.request.contextPath}/web/detail.jsp">The BFG</a>
 										</h6>
 									</div>
 									<div class="mid-2">
@@ -147,7 +148,7 @@
 							</div>
 
 							<div class="col-md-2 w3l-movie-gride-agile">
-								<a href="detail.jsp" class="hvr-shutter-out-horizontal"><img
+								<a href="${pageContext.request.contextPath}/web/detail.jsp" class="hvr-shutter-out-horizontal"><img
 									src="${pageContext.request.contextPath}/web/images/m9.jpg" title="album-name" alt=" " />
 									<div class="w3l-action-icon">
 										<i class="fa fa-play-circle" aria-hidden="true"></i>
@@ -155,7 +156,7 @@
 								<div class="mid-1">
 									<div class="w3l-movie-text">
 										<h6>
-											<a href="detail.jsp">Central Intelligence</a>
+											<a href="${pageContext.request.contextPath}/web/detail.jsp">Central Intelligence</a>
 										</h6>
 									</div>
 									<div class="mid-2">
@@ -186,7 +187,7 @@
 								</div>
 							</div>
 							<div class="col-md-2 w3l-movie-gride-agile">
-								<a href="detail.jsp" class="hvr-shutter-out-horizontal"><img
+								<a href="${pageContext.request.contextPath}/web/detail.jsp" class="hvr-shutter-out-horizontal"><img
 									src="${pageContext.request.contextPath}/web/images/m10.jpg" title="album-name" alt=" " />
 									<div class="w3l-action-icon">
 										<i class="fa fa-play-circle" aria-hidden="true"></i>
@@ -194,7 +195,7 @@
 								<div class="mid-1">
 									<div class="w3l-movie-text">
 										<h6>
-											<a href="detail.jsp">Don't Think Twice</a>
+											<a href="${pageContext.request.contextPath}/web/detail.jsp">Don't Think Twice</a>
 										</h6>
 									</div>
 									<div class="mid-2">
@@ -225,7 +226,7 @@
 								</div>
 							</div>
 							<div class="col-md-2 w3l-movie-gride-agile">
-								<a href="detail.jsp" class="hvr-shutter-out-horizontal"><img
+								<a href="${pageContext.request.contextPath}/web/detail.jsp" class="hvr-shutter-out-horizontal"><img
 									src="${pageContext.request.contextPath}/web/images/m11.jpg" title="album-name" alt=" " />
 									<div class="w3l-action-icon">
 										<i class="fa fa-play-circle" aria-hidden="true"></i>
@@ -233,7 +234,7 @@
 								<div class="mid-1">
 									<div class="w3l-movie-text">
 										<h6>
-											<a href="detail.jsp">X-Men</a>
+											<a href="${pageContext.request.contextPath}/web/detail.jsp">X-Men</a>
 										</h6>
 									</div>
 									<div class="mid-2">
@@ -264,7 +265,7 @@
 								</div>
 							</div>
 							<div class="col-md-2 w3l-movie-gride-agile">
-								<a href="detail.jsp" class="hvr-shutter-out-horizontal"><img
+								<a href="${pageContext.request.contextPath}/web/detail.jsp" class="hvr-shutter-out-horizontal"><img
 									src="${pageContext.request.contextPath}/web/images/m12.jpg" title="album-name" alt=" " />
 									<div class="w3l-action-icon">
 										<i class="fa fa-play-circle" aria-hidden="true"></i>
@@ -272,7 +273,7 @@
 								<div class="mid-1">
 									<div class="w3l-movie-text">
 										<h6>
-											<a href="detail.jsp">Greater</a>
+											<a href="${pageContext.request.contextPath}/web/detail.jsp">Greater</a>
 										</h6>
 									</div>
 									<div class="mid-2">
@@ -308,7 +309,7 @@
 						<!-- /latest-movies1 -->
 						<div class="browse-inner-come-agile-w3">
 							<div class="col-md-2 w3l-movie-gride-agile">
-								<a href="detail.jsp" class="hvr-shutter-out-horizontal"><img
+								<a href="${pageContext.request.contextPath}/web/detail.jsp" class="hvr-shutter-out-horizontal"><img
 									src="${pageContext.request.contextPath}/web/images/c7.jpg" title="album-name" alt=" " />
 									<div class="w3l-action-icon">
 										<i class="fa fa-play-circle" aria-hidden="true"></i>
@@ -316,7 +317,7 @@
 								<div class="mid-1">
 									<div class="w3l-movie-text">
 										<h6>
-											<a href="detail.jsp">Mike-Dave</a>
+											<a href="${pageContext.request.contextPath}/web/detail.jsp">Mike-Dave</a>
 										</h6>
 									</div>
 									<div class="mid-2">
@@ -347,7 +348,7 @@
 								</div>
 							</div>
 							<div class="col-md-2 w3l-movie-gride-agile">
-								<a href="detail.jsp" class="hvr-shutter-out-horizontal"><img
+								<a href="${pageContext.request.contextPath}/web/detail.jsp" class="hvr-shutter-out-horizontal"><img
 									src="${pageContext.request.contextPath}/web/images/c8.jpg" title="album-name" alt=" " />
 									<div class="w3l-action-icon">
 										<i class="fa fa-play-circle" aria-hidden="true"></i>
@@ -355,7 +356,7 @@
 								<div class="mid-1">
 									<div class="w3l-movie-text">
 										<h6>
-											<a href="detail.jsp">Bad Moms</a>
+											<a href="${pageContext.request.contextPath}/web/detail.jsp">Bad Moms</a>
 										</h6>
 									</div>
 									<div class="mid-2">
@@ -386,7 +387,7 @@
 								</div>
 							</div>
 							<div class="col-md-2 w3l-movie-gride-agile">
-								<a href="detail.jsp" class="hvr-shutter-out-horizontal"><img
+								<a href="${pageContext.request.contextPath}/web/detail.jsp" class="hvr-shutter-out-horizontal"><img
 									src="${pageContext.request.contextPath}/web/images/c9.jpg" title="album-name" alt=" " />
 									<div class="w3l-action-icon">
 										<i class="fa fa-play-circle" aria-hidden="true"></i>
@@ -394,7 +395,7 @@
 								<div class="mid-1">
 									<div class="w3l-movie-text">
 										<h6>
-											<a href="detail.jsp">Barber Shop</a>
+											<a href="${pageContext.request.contextPath}/web/detail.jsp">Barber Shop</a>
 										</h6>
 									</div>
 									<div class="mid-2">
@@ -425,7 +426,7 @@
 								</div>
 							</div>
 							<div class="col-md-2 w3l-movie-gride-agile">
-								<a href="detail.jsp" class="hvr-shutter-out-horizontal"><img
+								<a href="${pageContext.request.contextPath}/web/detail.jsp" class="hvr-shutter-out-horizontal"><img
 									src="${pageContext.request.contextPath}/web/images/c10.jpg" title="album-name" alt=" " />
 									<div class="w3l-action-icon">
 										<i class="fa fa-play-circle" aria-hidden="true"></i>
@@ -433,7 +434,7 @@
 								<div class="mid-1">
 									<div class="w3l-movie-text">
 										<h6>
-											<a href="detail.jsp">Nine Leaves</a>
+											<a href="${pageContext.request.contextPath}/web/detail.jsp">Nine Leaves</a>
 										</h6>
 									</div>
 									<div class="mid-2">
@@ -464,7 +465,7 @@
 								</div>
 							</div>
 							<div class="col-md-2 w3l-movie-gride-agile">
-								<a href="detail.jsp" class="hvr-shutter-out-horizontal"><img
+								<a href="${pageContext.request.contextPath}/web/detail.jsp" class="hvr-shutter-out-horizontal"><img
 									src="${pageContext.request.contextPath}/web/images/c11.jpg" title="album-name" alt=" " />
 									<div class="w3l-action-icon">
 										<i class="fa fa-play-circle" aria-hidden="true"></i>
@@ -472,7 +473,7 @@
 								<div class="mid-1">
 									<div class="w3l-movie-text">
 										<h6>
-											<a href="detail.jsp">Billy Lynn’s </a>
+											<a href="${pageContext.request.contextPath}/web/detail.jsp">Billy Lynn’s </a>
 										</h6>
 									</div>
 									<div class="mid-2">
@@ -503,7 +504,7 @@
 								</div>
 							</div>
 							<div class="col-md-2 w3l-movie-gride-agile">
-								<a href="detail.jsp" class="hvr-shutter-out-horizontal"><img
+								<a href="${pageContext.request.contextPath}/web/detail.jsp" class="hvr-shutter-out-horizontal"><img
 									src="${pageContext.request.contextPath}/web/images/c12.jpg" title="album-name" alt=" " />
 									<div class="w3l-action-icon">
 										<i class="fa fa-play-circle" aria-hidden="true"></i>
@@ -511,7 +512,7 @@
 								<div class="mid-1">
 									<div class="w3l-movie-text">
 										<h6>
-											<a href="detail.jsp">War on Everyone</a>
+											<a href="${pageContext.request.contextPath}/web/detail.jsp">War on Everyone</a>
 										</h6>
 									</div>
 									<div class="mid-2">

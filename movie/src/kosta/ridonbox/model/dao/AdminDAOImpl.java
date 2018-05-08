@@ -22,11 +22,11 @@ public class AdminDAOImpl implements AdminDAO {
 		try {
 			con = DbUtil.getConnection();
 			ps = con.prepareStatement("insert into screen_info values(?,?,?,?,?)");
-			ps.setString(1, screenDTO.getScreenNum());
-			ps.setString(3, screenDTO.getMovieNum());
-			ps.setString(3, screenDTO.getTheaterName());
-			ps.setString(4, screenDTO.getScreenDate());
-			ps.setInt(5, screenDTO.getRevTotal());
+			ps.setString(1, screenDTO.getScreen_num());
+			ps.setString(3, screenDTO.getMovie_num());
+			ps.setString(3, screenDTO.getTheater_name());
+			ps.setString(4, screenDTO.getScreen_date());
+			ps.setInt(5, screenDTO.getRev_total());
 			result = ps.executeUpdate();
 
 		} finally {
